@@ -1,0 +1,20 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/SaaS/RemoteAdministration/Control">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<import namespace="http://v8.1c.ru/8.1/data/enterprise"/>
+	<import namespace="http://v8.1c.ru/8.1/data/enterprise/current-config"/>
+	<import namespace="http://www.1c.ru/SaaS/RemoteAdministration/Messages"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="ОбластьДанныхПодготовлена" base="d2p1:Сообщение">
+		<property name="ОбластьДанных" type="xs:decimal"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="ОбластьДанныхУдалена" base="d2p1:Сообщение">
+		<property name="ОбластьДанных" type="xs:decimal"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="ОшибкаПодготовкиОбластиДанных" base="d2p1:Сообщение">
+		<property name="ОбластьДанных" type="xs:decimal"/>
+		<property name="ОписаниеОшибки" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="ОшибкаУдаленияОбластиДанных" base="d2p1:Сообщение">
+		<property name="ОбластьДанных" type="xs:decimal"/>
+		<property name="ОписаниеОшибки" type="xs:string"/>
+	</objectType>
+</package>

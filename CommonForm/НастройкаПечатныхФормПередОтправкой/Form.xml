@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Отправить по почте</v8:content>
+		</v8:item>
+	</Title>
+	<Width>38</Width>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КнопкаОК" id="17">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.КнопкаОК</CommandName>
+				<ExtendedTooltip name="КнопкаОКРасширеннаяПодсказка" id="42"/>
+			</Button>
+			<Button name="Отмена" id="37">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="43"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="Форматы" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат вложений</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont kind="AutoFont"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ФорматыРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<CheckBoxField name="ФорматPDF" id="38">
+					<DataPath>ФорматPDF</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФорматPDFКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ФорматPDFРасширеннаяПодсказка" id="45"/>
+				</CheckBoxField>
+				<CheckBoxField name="ФорматXLS" id="31">
+					<DataPath>ФорматXLS</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФорматXLSКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ФорматXLSРасширеннаяПодсказка" id="46"/>
+				</CheckBoxField>
+				<CheckBoxField name="ФорматHTML" id="33">
+					<DataPath>ФорматHTML</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФорматHTMLКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ФорматHTMLРасширеннаяПодсказка" id="47"/>
+				</CheckBoxField>
+				<CheckBoxField name="ФорматODS" id="40">
+					<DataPath>ФорматODS</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФорматODSКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ФорматODSРасширеннаяПодсказка" id="48"/>
+				</CheckBoxField>
+				<CheckBoxField name="ФорматMXL" id="29">
+					<DataPath>ФорматMXL</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФорматMXLКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ФорматMXLРасширеннаяПодсказка" id="49"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ЗапаковатьZIP" id="14">
+			<DataPath>ЗапаковатьZIP</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗапаковатьZIPКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ЗапаковатьZIPРасширеннаяПодсказка" id="50"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЗапаковатьZIP" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Упаковать в архив (.zip)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ЗапаковатьZIP</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФорматMXL" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличный документ (.mxl)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФорматMXL</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФорматXLS" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лист Excel (.xls)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФорматXLS</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФорматHTML" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ HTML (.html)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФорматHTML</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФорматPDF" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ PDF (.pdf)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФорматPDF</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФорматODS" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронная таблица ODF(.ods)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФорматODS</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КнопкаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КнопкаОКВыполнить</Action>
+		</Command>
+	</Commands>
+</Form>

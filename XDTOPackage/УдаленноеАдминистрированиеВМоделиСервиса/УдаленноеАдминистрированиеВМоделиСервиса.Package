@@ -1,0 +1,53 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.1c.ru/SaaS/RemoteAdministration/App">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<import namespace="http://v8.1c.ru/8.1/data/enterprise"/>
+	<import namespace="http://v8.1c.ru/8.1/data/enterprise/current-config"/>
+	<import namespace="http://www.1c.ru/SaaS/RemoteAdministration/Messages"/>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="ОбновитьПользователя" base="d2p1:Сообщение">
+		<property name="Имя" type="xs:string"/>
+		<property name="ПолноеИмя" type="xs:string"/>
+		<property name="СохраняемоеЗначениеПароля" type="xs:string"/>
+		<property name="Язык" type="xs:string"/>
+		<property name="Почта" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string">
+				<pattern>[^@]+@[^\.]+\..+</pattern>
+			</typeDef>
+		</property>
+		<property name="ОбластьДанных" type="xs:decimal"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ИдентификаторПользователяСервиса" type="d3p1:UUID"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ИдентификаторПользователяОбластиДанных" type="d3p1:UUID" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="УстановитьПолныеПраваОбластиДанных" base="d2p1:Сообщение">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ИдентификаторПользователяСервиса" type="d3p1:UUID"/>
+		<property name="ОбластьДанных" type="xs:decimal"/>
+		<property name="Значение" type="xs:boolean"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="УстановитьДоступКОбластиДанных" base="d2p1:Сообщение">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ИдентификаторПользователяСервиса" type="d3p1:UUID"/>
+		<property name="ОбластьДанных" type="xs:decimal"/>
+		<property name="Значение" type="xs:boolean"/>
+		<property name="Имя" type="xs:string" lowerBound="0"/>
+		<property name="СохраняемоеЗначениеПароля" type="xs:string" lowerBound="0"/>
+		<property name="Язык" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="УстановитьПраваПользователяПоУмолчанию" base="d2p1:Сообщение">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ИдентификаторПользователяСервиса" type="d3p1:UUID"/>
+		<property name="ОбластьДанных" type="xs:decimal"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="ПодготовитьОбластьДанных" base="d2p1:Сообщение">
+		<property name="ОбластьДанных" type="xs:decimal"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ИдентификаторФайлаДанных" type="d3p1:UUID" lowerBound="0"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="УдалитьОбластьДанных" base="d2p1:Сообщение">
+		<property name="ОбластьДанных" type="xs:decimal"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="УстановитьПараметрыОбластиДанных" base="d2p1:Сообщение">
+		<property name="ОбластьДанных" type="xs:decimal"/>
+		<property name="ЧасовойПояс" type="xs:string"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="УстановитьПараметрыИБ" base="d2p1:Сообщение">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="Параметры" type="d3p1:Structure"/>
+	</objectType>
+	<objectType xmlns:d2p1="http://www.1c.ru/SaaS/RemoteAdministration/Messages" name="УстановитьКонечнуюТочкуМенеджераСервиса" base="d2p1:Сообщение"/>
+</package>
